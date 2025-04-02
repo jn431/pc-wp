@@ -1,0 +1,87 @@
+/* div#login {
+    background: #000;
+    height: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+} */
+
+body.login {
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+.login #backtoblog a:hover,
+.login #nav a:hover,
+.login h1 a:hover {
+    color: var(--primary-color);
+}
+
+.wp-core-ui .button-primary,
+.wp-core-ui .button-primary.active,
+.wp-core-ui .button-primary.active:focus,
+.wp-core-ui .button-primary.active:hover,
+.wp-core-ui .button-primary:active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.wp-core-ui .button-primary.focus,
+.wp-core-ui .button-primary.hover,
+.wp-core-ui .button-primary:focus,
+.wp-core-ui .button-primary:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.login #login_error,
+.login .message,
+.login .success {
+    border-left: 4px solid red;
+}
+
+input[type=checkbox]:focus,
+input[type=color]:focus,
+input[type=date]:focus,
+input[type=datetime-local]:focus,
+input[type=datetime]:focus,
+input[type=email]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=password]:focus,
+input[type=radio]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=text]:focus,
+input[type=time]:focus,
+input[type=url]:focus,
+input[type=week]:focus,
+select:focus,
+textarea:focus {
+    font-family: inherit;
+    border-color: var(--primary-color, #2271b1);
+    box-shadow: 0 0 0 1px var(--primary-color, #2271b1);
+    outline: 1px solid transparent;
+}
+
+.login form .input,
+.login input[type=password],
+.login input[type=text] {
+    font-size: 16px;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid green;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.dashicons::before {
+    color: var(--primary-color, #2271b1);
+}

@@ -1,0 +1,19 @@
+.admin-control-modal {
+    margin-top: 60px;
+}
+
+.edit-post-btn {
+    background-color: var(--primary-color);
+    color: #FFF;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.edit-post-btn a {
+    color: inherit;
+}
+
+#wpcontent {
+    background: red;
+}

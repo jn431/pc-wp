@@ -1,0 +1,48 @@
+.jaeins-design-block {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.image-container {
+    position: relative;
+    margin-bottom: 10px;
+    flex: 1 0 50%;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.upload-button,
+.change-image-button {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover,
+.change-image-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.title-field,
+.subtitle-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.impression-hero-block {
+    display: flex;
+    align-items: start;
+}
