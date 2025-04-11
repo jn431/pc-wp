@@ -1,12 +1,9 @@
-/* div#login {
-    background: #000;
-    height: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-} */
-
+:root {
+    --login-bg: #161616;
+}
 body.login {
     font-family: 'Poppins', 'Roboto', sans-serif;
+     background: var(--login-bg);
 }
 
 .login #backtoblog a:hover,

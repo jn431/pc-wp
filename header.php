@@ -11,11 +11,11 @@
 <body <?php body_class('no-js'); ?>>
     <header>
         <?php do_action('impression_quickbar'); ?>
-        <div id="header-wrap">
+        <div id="header-wrap" class="page-width">
             <div id="logo-col" class="header-col">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
                     <?php //render_customizer_logo(); ?>
-                    <img src="<?php echo IMPRESSION_THEME_URI . "assets/images/placeholder-logo.svg" ?>" alt="SITE">
+                    <img src="<?php echo IMPRESSION_THEME_URI . "assets/images/logo.png" ?>" alt="<?php echo bloginfo('name'); ?>">
                 </a>
             </div>
             <div id="menu-col" class="header-col">

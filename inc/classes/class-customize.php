@@ -54,12 +54,46 @@ if (!class_exists('Impression_Customize')) {
 
         /**
          * Sanitize boolean for checkbox.
-         * @param bool $checked Whether or not a box is checked.
+         * @param  bool $checked Whether or not a box is checked.
          * @return bool
          */
         public static function sanitize_checkbox($checked = null)
         {
             return (bool) isset($checked) && true === $checked;
         }
+
+        /**
+         * Sanitize boolean for checkbox.
+         * @param  string
+         * @return string
+         */
+        public static function sanitize_phone_no($input)
+        {
+            $regex = "/^(\(?\d{3}\)?)?[- .]?(\d{3})[- .]?(\d{4})$/";
+            $input = preg_replace($regex, "(\\1) \\2-\\3", $input);
+
+            if (strlen($input) < 10 || strlen($input) > 14 || preg_match("/[a-z]/i", $input)) {
+                return new \WP_Error('invalid', __('Invalid phone number (format: +1(123)555-1234'));
+            } else {
+                return $input;
+            }
+        }
+
+        /**
+         * Validate URL
+         * @param bool $validity
+         * @param string $value
+         * @return false
+         */
+        public static function validate_url_input($validity, $value)
+        {
+            if ($value === "") {
+                return true;
+            } else if (filter_var($value, FILTER_VALIDATE_URL) === FALSE) {
+                return new \WP_Error('invalid', __('Enter a valid url'));
+            }
+            return true;
+        }
+
     }
 }

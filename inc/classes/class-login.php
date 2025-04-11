@@ -36,15 +36,11 @@ if (!class_exists('Impression_Login')) {
                 $custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
             } else {
 
-                if (file_exists(IMPRESSION_THEME_DIR . 'assets/images/placeholder-logo.svg')) {
-                    $custom_logo_url = IMPRESSION_THEME_URI . 'assets/images/placeholder-logo.svg';
+                if (file_exists(IMPRESSION_THEME_DIR . 'assets/images/logo.png')) {
+                    $custom_logo_url = IMPRESSION_THEME_URI . 'assets/images/logo.png';
                 }
             }
-            $aspect_ratio = $this->get_image_aspect_ratio(IMPRESSION_THEME_DIR . 'assets/images/placeholder-logo.svg');
-            echo "<pre style='text-align: left'>";
-            var_dump($aspect_ratio);
-            echo "</pre>";
-
+            $aspect_ratio = $this->get_image_aspect_ratio(IMPRESSION_THEME_DIR . 'assets/images/logo.png');
 ?>
             <style>
                 body.login div#login h1 a {

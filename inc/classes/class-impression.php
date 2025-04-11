@@ -19,7 +19,7 @@ if (!class_exists('Impression_Theme')) {
    {
 
       public $default_max_desktop_width = 1440;
-      public $default_med_desktop_width = 860;
+      public $default_med_desktop_width = 1100;
       public $primary_color = '#03bafc';
       public $secondary_color = '#00FF00';
 

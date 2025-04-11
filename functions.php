@@ -27,7 +27,7 @@ require IMPRESSION_THEME_DIR . 'inc/classes/class-admin.php';
 require IMPRESSION_THEME_DIR . 'inc/classes/class-login.php';
 require IMPRESSION_THEME_DIR . 'inc/classes/class-customize.php';
 require IMPRESSION_THEME_DIR . 'inc/classes/class-custom-fonts.php';
-require IMPRESSION_THEME_DIR . 'inc/classes/class-custom-quickbar.php';
+require IMPRESSION_THEME_DIR . 'inc/classes/class-custom-social-media.php';
 require IMPRESSION_THEME_DIR . 'inc/classes/class-custom-blocks.php';
 
 function impression_theme_assets()
@@ -54,7 +54,8 @@ if (!function_exists('impression_theme_setup')) {
     {
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
-        set_post_thumbnail_size(1568, 9999);
+        set_post_thumbnail_size(400, 225);
+        //add_image_size( 'thumb-16x9', 1280, 720, true );
 
         add_theme_support(
             'html5',
@@ -223,5 +224,5 @@ if (!function_exists('impression_theme_setup')) {
 new Impression_Theme();
 new Impression_Customize();
 new Impression_Custom_Fonts();
-new Impression_Customizer_Quickbar();
+new Impression_Customizer_Social_Media();
 $block = new Impression_Custom_Blocks();

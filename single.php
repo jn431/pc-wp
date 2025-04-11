@@ -1,14 +1,14 @@
 <?php
 get_header();
 
-$block_content = custom_render_hero_section_block(array(
+/* $block_content = custom_render_hero_section_block(array(
    'image' => 'URL_TO_IMAGE',
    'title' => 'Your Title',
    'subtitle' => 'Your Subtitle',
 ));
 
 echo "Block content";
-echo $block_content;
+echo $block_content; */
 
 ?>
 <main>
