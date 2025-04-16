@@ -1,4 +1,4 @@
-<article class="post post--most-recent">
+<article class="post article-featured">
    <?php
    $categories = get_the_category();
    if (!empty($categories)) : ?>
@@ -18,12 +18,24 @@
    <?php endif; ?>
 
    <?php if (has_post_thumbnail()) : ?>
-         <a href="<?php the_permalink(); ?>" class="article-thumbnail-wrap">
-            <?php the_post_thumbnail('post-thumbnails'); ?>
-         </a>
+      <a href="<?php the_permalink(); ?>" class="article-thumbnail-wrap">
+         <div class="shape--floppydisk-wrap">
+            <div class="shape--floppydisk">
+               <?php the_post_thumbnail('post-thumbnails'); ?>
+            </div>
+         </div>
+      </a>
    <?php endif; ?>
    <div class="article-content-wrap">
-      <h3 class="article-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+      <?php if (!empty($categories)) : ?>
+         <div class="category--main rainbow-outer">
+            <div class="rainbow-inner"></div>
+            <span class="rainbow-text">
+               <?php echo esc_html($categories[0]->name); ?>
+            </span>
+         </div>
+      <?php endif; ?>
+      <h3 class="article-title main--title uppercase"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
       <div class="excerpt"><?php the_excerpt(); ?></div>
    </div>
 </article>

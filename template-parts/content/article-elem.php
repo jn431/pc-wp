@@ -1,4 +1,4 @@
-<article class="post post--horizontal">
+<article class="post article-short post--horizontal">
    <?php
    $categories = get_the_category();
    if (!empty($categories)) : ?>

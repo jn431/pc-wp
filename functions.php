@@ -29,6 +29,7 @@ require IMPRESSION_THEME_DIR . 'inc/classes/class-customize.php';
 require IMPRESSION_THEME_DIR . 'inc/classes/class-custom-fonts.php';
 require IMPRESSION_THEME_DIR . 'inc/classes/class-custom-social-media.php';
 require IMPRESSION_THEME_DIR . 'inc/classes/class-custom-blocks.php';
+require IMPRESSION_THEME_DIR . 'inc/classes/class-streams.php';
 
 function impression_theme_assets()
 {
@@ -225,4 +226,5 @@ new Impression_Theme();
 new Impression_Customize();
 new Impression_Custom_Fonts();
 new Impression_Customizer_Social_Media();
+new Impression_Streams();
 $block = new Impression_Custom_Blocks();
