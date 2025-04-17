@@ -24,11 +24,13 @@ if ($query->have_posts()) : ?>
             </svg>
          </h2>
       </div>
+      <div class="float-shape-chevron">
+         <?php echo file_get_contents(IMPRESSION_THEME_URI . 'assets/images/accents/triple-chevron.svg'); ?></div>
       <div class="news-container">
          <?php $query->the_post(); ?>
          <div class="col--left container">
             <?php get_template_part('template-parts/content/article', 'featured'); ?>
-            <div class="floating-blocks-vertical">
+            <div class="float-blocks floating-blocks-vertical">
                <svg class="float-shape" width="6" height="6">
                   <use xlink:href="#square-filled"></use>
                </svg>
@@ -46,6 +48,14 @@ if ($query->have_posts()) : ?>
                   <?php while ($query->have_posts()) : $query->the_post(); ?>
                      <?php get_template_part('template-parts/content/article', 'elem'); ?>
                   <?php endwhile; ?>
+                  <div class="float-blocks floating-blocks-horizontal">
+                  <svg class="float-shape" width="6" height="6">
+                     <use xlink:href="#square-filled"></use>
+                  </svg>
+                  <svg class="float-shape" width="6" height="6">
+                     <use xlink:href="#square-hollow"></use>
+                  </svg>
+               </div>
                </div>
             </div><!-- .right -->
          <?php endif; ?>

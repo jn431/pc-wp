@@ -5,7 +5,7 @@
                 <a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener">
                     <?php
 
-                    $svg_path = get_template_directory() . "/assets/images/icon-$key.svg";
+                    $svg_path = get_template_directory() . "/assets/images/icons/icon-$key.svg";
 
                     // Check if the file exists before including
                     if (file_exists($svg_path)) {
@@ -16,7 +16,6 @@
                         echo "<span>[$key icon missing]</span>";
                     }
                     ?>
-                    <!--  <img src="<?php echo IMPRESSION_THEME_URI . "assets/images/icon-$key.svg"; ?>" alt="<?php echo esc_html($key); ?>" width="30" height="auto"> -->
                 </a>
             </li>
         <?php endforeach; ?>
